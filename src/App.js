@@ -77,7 +77,7 @@ export default function App() {
         controller.abort();
       };
     },
-    [query]
+    [query, setError, setIsLoading, setMovies]
   );
 
   return (
@@ -351,7 +351,7 @@ function MovieDetails({ selectedId, handleCloseMovie, onAddWatched, watched }) {
     Genre: genre,
   } = movie;
 
-  const [avgRating, setAvgRating] = useState(0);
+  // const [avgRating, setAvgRating] = useState(0);
 
   function handleAdd() {
     const newWatchedMovie = {
